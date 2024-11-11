@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Vaporyona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Strona Vaporyona</h1>
+    <button style="position: relative; z-index: 1;"" onclick="dodajVaporyona()">Dodaj Vaporyona</button>
+    <div style="height: 100%;" id="tomekcage"></div>
+
+    <script>
+        let VAPS = 0;
+        function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay); // ujebany sllep
+}
+
+        function dodajVaporyona() {
+            const img = document.createElement('img');
+            img.src = 'https://www.freeiconspng.com/uploads/vaporeon-free-png-3.png'; // Correct image URL
+            img.alt = 'Vaporyon';
+            img.height = 200;
+            img.width = 200;
+            const container = document.getElementById('tomekcage');
+            const cagex = container.offsetWidth;
+            const cagey = container.offsetHeight;
+            const randomx = Math.floor(Math.random() * cagex);
+            const randomy = Math.floor(Math.random() * cagey);
+            const randomrot = Math.floor(Math.random() * 360);
+            const rX = randomx ;
+            const rY = randomy ;
+            VAPS ++;
+            if(VAPS == 20){
+                alert("VAPERRRRON")
+            }
+            
+            img.style.position = 'absolute';
+            img.style.left = rX + 'px';
+            img.style.top = rY + 'px';
+            img.style.zIndex = 0;
+            img.style.transform = `rotate(${randomrot}deg)`;
+            container.appendChild(img);
+        }
+    </script>
+</body>
+</html>

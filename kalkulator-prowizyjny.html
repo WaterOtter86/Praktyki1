@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Prowizyjny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulator Prowizyjny</h1>
+    <input type="number" id="sprzedaz" placeholder="Wartość sprzedaży">
+    <input type="number" id="marza" placeholder="Marża (%)">
+    <button onclick="obliczProwizje()">Oblicz prowizję</button>
+    <p>Kasa dla sprzedawcy: <span id="wynik-prowizja"></span></p>
+
+    <script>
+        function obliczProwizje() {
+            const sprzedaz = parseFloat(document.getElementById('sprzedaz').value);
+            const marza = parseFloat(document.getElementById('marza').value) / 100;
+            const kasa = sprzedaz * marza;
+            document.getElementById('wynik-prowizja').textContent = kasa.toFixed(2) + ' PLN';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.MainTextThingy{
+    position: sticky;
+    top: 0;/*ni huhu wiem jak to wysrodkowac */
+}
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.caruzela {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.caruzela-item {
+    min-width: 100%;
+    text-align: center;
+}
+
+.caruzela-item img {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+}
+
+.caruzela-item p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: gray;
+    color: rgb(90, 1, 78);
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* ladnie */
+}
+

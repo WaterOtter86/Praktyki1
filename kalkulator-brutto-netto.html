@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Brutto-Netto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulator Brutto-Netto</h1>
+    <input type="number" id="brutto" placeholder="Podaj kwotę brutto">
+    <button onclick="obliczNetto()">Oblicz netto</button>
+    <p>Wynik netto: <span id="wynik-netto"></span></p>
+
+    <script>
+        function obliczNetto() {
+            const brutto = parseFloat(document.getElementById('brutto').value);
+            const netto = brutto * 0.77; // przykładowe odliczenie podatku 23%
+            document.getElementById('wynik-netto').textContent = netto.toFixed(2) + ' PLN';
+        }
+    </script>
+</body>
+</html>
